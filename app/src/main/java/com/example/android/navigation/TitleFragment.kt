@@ -28,8 +28,8 @@ class TitleFragment : Fragment() {
 
 
         //The complete onClickListener with Navigation using createNavigateOnClickListener
-        binding.playButton.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
+        binding.playButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment()) }
 
         // We need to tell Android that our TitleFragment has a menu. In onCreateView call setHasOptionsMenu(true).
         setHasOptionsMenu(true)
