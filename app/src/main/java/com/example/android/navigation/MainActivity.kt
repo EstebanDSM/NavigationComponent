@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
     // Donner le comportement de la fleche de retour dans ActionBar
     override fun onSupportNavigateUp(): Boolean {
-//        return this.findNavController(R.id.myNavHostFragment).navigateUp() || super.onSupportNavigateUp()
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
     }
